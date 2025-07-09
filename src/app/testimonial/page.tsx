@@ -1,8 +1,17 @@
+'use client'
 import { Card, CardContent } from '@/components/ui/card'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const TestimonialPage = () => {
+ useEffect(()=> {
+    Aos.init({
+        duration: 1000,
+        once : true,
+    })
+ })
     const testimonial_data = [
         {
             name: 'Alex J.',
@@ -24,10 +33,10 @@ const TestimonialPage = () => {
                 <div className='w-full flex flex-wrap md:gap-6 sm:gap-4 gap-2 h-auto md:py-7 sm:py-5 py-3 justify-evenly items-center'>
                     {
                         testimonial_data.map(({ description, name } , index) => (
-                            <Card key={index} className='shadow-none border-none rounded-none p-0 flex justify-center items-end max-3xs:w-full w-[390px] h-[250px] relative'>
+                            <Card key={index} data-aos="fade-up" className='shadow-none  border-none rounded-none p-0 flex justify-end items-end max-3xs:w-full w-[390px] h-[250px] relative'>
                                 <Image src='/images/testimonial-icon.png' alt='icon' width={64} height={64} className='absolute top-0 right-0' />
                                 <CardContent className='xs:p-4 p-2 w-full h-auto bg-muted-foreground/20 rounded-2xl flex justify-center items-center flex-col gap-3'>
-                                    <p className='md:text-xl sm:text-lg 2xs:text-base 3xs:text-sm text-xs font-sans text-primary text-center'>
+                                    <p className='md:text-xl xl:mt-6 sm:text-lg 2xs:text-base 3xs:text-sm text-xs font-sans text-primary text-center'>
                                         {`${description}`}
                                     </p>
                                     <h5 className=' md:text-4xl sm:text-3xl text-2xl font-mono text-primary capitalize'>
