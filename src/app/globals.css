@@ -125,13 +125,9 @@
 }
 
 .letter-spacing {
-  letter-spacing: 6px;
-}
-@media (max-width : 540px) {
-  .letter-spacing {
   letter-spacing: 4px;
 }
-}
+
 @layer utilities {
   .gradient {
   @apply  bg-gradient-to-b from-gray-300 via-gray-200 to-gray-600
