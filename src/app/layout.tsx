@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Tektur, Tac_One } from "next/font/google";
 import "./globals.css";
+import HeroPage from "./hero/page";
+import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const tektur = Tektur({
+  variable: "--font-tektur",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const tacOne = Tac_One({
+  variable: "--font-tac-one",
   subsets: ["latin"],
+  weight : ['400'],
+  display : 'swap'
 });
 
 export const metadata: Metadata = {
@@ -25,9 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${tektur.variable} ${tacOne.variable} antialiased`}
       >
+        <HeroPage/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
