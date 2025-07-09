@@ -122,12 +122,18 @@
 }
 @theme {
   --breakpoint-xs: 30rem;
+  --breakpoint-2xs: 24rem;
+  --breakpoint-3xs: 18rem;
 }
 
 .letter-spacing {
   letter-spacing: 4px;
 }
-
+@media (max-width : 768px) {
+.letter-spacing {
+  letter-spacing: 2px;
+}
+}
 @layer utilities {
   .gradient {
   @apply  bg-gradient-to-b from-gray-300 via-gray-200 to-gray-600
