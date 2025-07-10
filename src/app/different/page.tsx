@@ -48,9 +48,9 @@ const DifferentPage = () => {
                         <div className="relative w-full h-[400px] rounded-[40px] overflow-hidden">
 
                             <div className="absolute inset-0 flex flex-col justify-start items-center p-4 bg-gradient-to-t from-black/60 via-transparent">
-                                <h2 className='gradient-title xl:text-[231px] lg:text-[200px] lg:leading-[130px] md:text-[170px] md:leading-[110px] sm:text-[150px] sm:leading-[90px] xs:text-[124px] xs:leading-[70px] text-[100px] leading-[50px] min-[350px]:text-[80px] min-[350px]:leading-[64px] min-[280px]:text-[56px] min-[280px]:leading-[48px] font-mono uppercase xl:leading-[150px] letter-spacing'>Technology</h2>
-                                <div className="w-full h-full  flex justify-between items-center gap-4">
-                                    <h3 className="lg:text-5xl max-w-md text-primary-foreground text-4xl font-sans sm:text-3xl font-bold">
+                                <h2 className='gradient-title xl:text-[231px] lg:text-[200px] lg:leading-[130px] md:text-[140px] md:leading-[110px] sm:text-[110px] sm:leading-[90px] xs:text-[84px] xs:leading-[70px] text-[64px] leading-[50px] min-[350px]:text-[64px] min-[350px]:leading-[64px] min-[280px]:text-[48px] min-[280px]:leading-[48px] font-mono uppercase xl:leading-[150px] letter-spacing'>Technology</h2>
+                                <div className="w-full h-full  flex md:flex-row flex-col md:justify-between justify-start md:items-center items-start lg:gap-4 md:gap-8">
+                                    <h3 className="lg:text-5xl lg:max-w-md md:max-w-sm max-w-xs text-primary-foreground md:text-4xl font-sans sm:text-3xl text-2xl font-bold">
                                         Customer-Centric Approach
                                     </h3>
 
@@ -58,16 +58,16 @@ const DifferentPage = () => {
                                         src='/images/boy-image.png'
                                         alt="Customer"
                                         layout="fill"
-                                        className="object-cover "
+                                        className="object-cover"
                                     />
                                     <Image
                                         src='/images/boy-image1.png'
                                         alt="Customer"
                                         layout="fill"
-                                        className="object-cover absolute top-20 bottom-0 left-0 -z-10"
+                                        className="object-cover absolute top-20 bottom-0 left-0  -z-10"
                                     />
 
-                                    <p className="xl:text-xl text-lg max-w-sm px-3  mt-2 font-sans text-primary-foreground">
+                                    <p className="xl:text-xl lg:text-lg  sm:text-base text-sm md:max-w-xs max-w-2xs lg:max-w-sm lg:px-3  mt-2 font-sans text-primary-foreground">
                                         Your satisfaction is our priority. We offer a 30-day return policy and a dedicated support team to assist you.
                                     </p>
                                 </div>
