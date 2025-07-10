@@ -15,7 +15,9 @@ const HeroPage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scale = Math.min(1.2, 1 + offset / 1000);
+ const scale = Math.min(2, 1 + offset / 1000);
+const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;
+const adjustedScale = isMobile ? scale + 0.1 : scale;
   return (
     <div className='w-full relative min-h-screen flex items-center p-6 flex-col'>
       <div className="w-full flex flex-col gap-6 justify-center items-center h-auto">
@@ -30,11 +32,11 @@ const HeroPage = () => {
               <p className='xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl text-xl text-primary-foreground text-center font-sans'>Experience Sound Like Never Before</p>
               <div
                 style={{
-                  transform: `${offset > 0 ? `translateY(1200px) scale(${scale})` : 'translateY(0px)'
+                  transform: `${offset > 0 ? `translateY(1300px) scale(${adjustedScale})` : 'translateY(0px)'
                     }`,
                   transition: 'transform 0.5s linear'
                 }}
-                className='absolute mx-auto xs:top-0 top-20 sm:w-[620px] z-50 w-full 2xs:h-[400px] 3xs:h-[350px] h-auto xs:h-[480px]  sm:h-[540px]'>
+                className='headphone absolute mx-auto xs:top-0 top-20 sm:w-[620px] z-50 w-full 2xs:h-[400px] 3xs:h-[350px] h-auto xs:h-[480px]  sm:h-[540px]'>
 
                 <Image
                   data-aos="fade-down"

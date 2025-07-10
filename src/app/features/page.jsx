@@ -9,29 +9,36 @@ const FeaturesPage = () => {
         </h2>
 
         <div className="w-full h-full flex justify-center py-10 items-center">
-          <div className="w-full h-auto grid grid-cols-2 gap-[110px] mx-auto  text-primary-foreground text-2xl font-sans justify-between items-center">
+         
+          <div className="w-full h-auto relative grid grid-cols-2 gap-[110px] mx-auto  text-primary-foreground min-[1224px]:text-2xl text-xl font-sans justify-between items-center">
             <div className="flex justify-start flex-col gap-[110px] items-start">
-              <div className="w-[280px] h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
+              <div className="xl:w-[280px] w-[240px] px-3 h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
                 Crystal-Clear Sound Quality
               </div>
-              <div className="w-[280px] h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
-                Crystal-Clear Sound Quality
+              <hr className="w-[25%] border border-primary/80 absolute top-40 xl:left-60 left-45 rotate-45" />
+              <div className="xl:w-[280px] w-[240px] px-3 h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
+               Active Noise Cancellation (ANC)
               </div>
-              <div className="w-[280px] h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
-                Crystal-Clear Sound Quality
+               <hr className="w-[15%] border border-primary/80 absolute top-70 xl:left-72 left-60" />
+              <div className="xl:w-[280px] w-[240px] px-3 h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
+                All-Day Comfort
               </div>
+              <hr className="w-[25%] border border-primary/80 absolute bottom-40 xl:left-60 left-45 -rotate-45" />
             </div>
 
             <div className="flex justify-end flex-col gap-[110px] items-end">
-              <div className="w-[280px] h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
-                Crystal-Clear Sound Quality
+              <div className="xl:w-[280px] w-[240px] px-3 h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
+                Seamless Connectivity
               </div>
-              <div className="w-[280px] h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
-                Crystal-Clear Sound Quality
+               <hr className="w-[25%] border border-primary/80 absolute top-40 xl:right-60 right-45 -rotate-45" />
+              <div className="xl:w-[280px] w-[240px] px-3 h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
+                Long Battery Life
               </div>
-              <div className="w-[280px] h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
-                Crystal-Clear Sound Quality
+              <hr className="w-[15%] border border-primary/80 absolute top-70 xl:right-72 right-60" />
+              <div className="xl:w-[280px] w-[240px] px-3 h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
+                Ergonomic Comfort Redefined
               </div>
+               <hr className="w-[25%] border border-primary/80 absolute bottom-40 xl:right-60 right-45 rotate-45" />
             </div>
           </div>
         </div>
