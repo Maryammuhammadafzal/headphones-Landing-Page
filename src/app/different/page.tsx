@@ -15,7 +15,7 @@ const DifferentPage = () => {
                         {[1, 2].map((_, i) => (
                             <div
                                 key={i}
-                                className={`relative w-full h-[400px] rounded-[40px] overflow-hidden ${i === 0 ? 'col-span-3' : 'col-span-2'}`}
+                                className={`relative w-full h-[450px] rounded-[40px] overflow-hidden ${i === 0 ? 'col-span-3' : 'col-span-2'}`}
                             >
                                 <Image
                                     src={i === 0 ? '/images/different-image1.png' : '/images/different-image2.png'}
@@ -27,15 +27,16 @@ const DifferentPage = () => {
                                     <Image
                                         src="/images/star-icon.png"
                                         alt="icon"
-                                        width={64}
-                                        height={64}
+                                        width={50}
+                                        height={50}
+                                        className={`${i === 0 ? 'block' : 'hidden'} m-5`}
                                     />
-                                    <div className="text-primary-foreground mt-4 w-full h-full flex flex-col justify-end p-6">
-                                        <h3 className="text-2xl font-sans sm:text-3xl font-bold">
-                                            Uncompromising Quality
+                                    <div className="text-primary-foreground mt-4 w-full h-full flex flex-col justify-end py-5 px-3">
+                                        <h3 className="lg:text-5xl text-4xl font-sans sm:text-3xl font-bold">
+                                            {i === 0 ? 'Uncompromising Quality' : 'Innovative Design'}
                                         </h3>
-                                        <p className="text-sm sm:text-base mt-2 font-sans max-w-lg">
-                                            Every detail of our headphones is crafted to perfection, from the materials used to the sound they produce.
+                                        <p className="xl:text-xl text-lg  mt-2 font-sans max-w-lg">
+                                            {i === 0 ? 'Every detail of our headphones is crafted to perfection, from the materials used to the sound they produce.' : 'Combining aesthetics and functionality, our headphones are a perfect blend of style and performance.'}
                                         </p>
                                     </div>
                                 </div>
@@ -44,13 +45,8 @@ const DifferentPage = () => {
                     </div>
 
                     <div className="w-full">
-                        <div className="relative w-full h-[400px] rounded-[40px] overflow-hidden">
-                            <Image
-                                src="/images/work-image.png"
-                                alt="Customer Feedback"
-                                layout="fill"
-                                className="object-cover"
-                            />
+                        <div className="relative bg-primary w-full h-[400px] rounded-[40px] overflow-hidden">
+                          
                             <div className="absolute inset-0 flex flex-col justify-end items-start p-4 bg-gradient-to-t from-black/60 via-transparent">
                                 <Image
                                     src="/images/work-icon.png"
