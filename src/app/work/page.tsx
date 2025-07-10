@@ -6,7 +6,7 @@ const WorkPage = () => {
     return (
         <div className='flex w-full justify-center items-center md:py-20 sm:py-14 xs:py-10 2xs:py-5 py-3 h-auto'>
             <div className='w-full h-auto flex justify-center items-center flex-col md:gap-10 sm:gap-6 gap-3'>
-                <h2 className='text-primary xl:text-8xl lg:text-[84px] md:text-[64px] sm:text-[56px] xs:text-[38px] 2xs:text-3xl max-2xs:leading-5 3xs:text-2xl text-xl uppercase text-center letter-spacing font-mono'>How It works</h2>
+                <h2 className='text-primary xl:text-8xl lg:text-[84px] md:text-[64px] sm:text-[56px] xs:text-[48px] text-3xl uppercase text-center letter-spacing font-mono'>How It works</h2>
                 <div className='w-full sm:px-3 p-0 flex flex-wrap md:gap-6 gap-4 h-auto md:py-7 sm:py-5 py-3 min-[1288px]:justify-evenly justify-between items-center'>
                     <div className='xl:w-[32%] min-[920px]:w-[45%] w-full md:p-0 py-3 h-auto flex flex-col gap-5'>
                         <h3 className='md:text-5xl xs:text-[40px] text-3xl font-bold font-sans text-primary'>Advanced Audio Technology</h3>
