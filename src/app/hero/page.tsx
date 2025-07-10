@@ -15,9 +15,14 @@ const HeroPage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
- const scale = Math.min(2, 1 + offset / 1000);
-const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;
-const adjustedScale = isMobile ? scale + 0.1 : scale;
+  const scale = Math.min(1.2, 1 + offset / 1000);
+  const isTablet = typeof window !== "undefined" && window.innerWidth < 1024;
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  const adjustedScale = isTablet ? scale - 0.4 : scale && isMobile ? scale - 0.6 : scale ;
+
+  const baseTranslateY = 1300;
+  const adjustedTranslateY = baseTranslateY * (adjustedScale / 1);
+
   return (
     <div className='w-full relative min-h-screen flex items-center p-6 flex-col'>
       <div className="w-full flex flex-col gap-6 justify-center items-center h-auto">
@@ -32,7 +37,7 @@ const adjustedScale = isMobile ? scale + 0.1 : scale;
               <p className='xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl text-xl text-primary-foreground text-center font-sans'>Experience Sound Like Never Before</p>
               <div
                 style={{
-                  transform: `${offset > 0 ? `translateY(1300px) scale(${adjustedScale})` : 'translateY(0px)'
+                  transform: `${offset > 0 ? `translateY(${adjustedTranslateY}px) scale(${adjustedScale})` : 'translateY(0px)'
                     }`,
                   transition: 'transform 0.5s linear'
                 }}

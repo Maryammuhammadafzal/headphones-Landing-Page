@@ -8,37 +8,37 @@ const FeaturesPage = () => {
           The Ultimate Listening Experience
         </h2>
 
-        <div className="w-full h-full flex justify-center py-10 items-center">
+        <div className="w-full h-full flex justify-center min-[900px]:py-10 py-3 items-center">
          
           <div className="w-full h-auto relative grid grid-cols-2 gap-[110px] mx-auto  text-primary-foreground min-[1224px]:text-2xl text-xl font-sans justify-between items-center">
             <div className="flex justify-start flex-col gap-[110px] items-start">
-              <div className="xl:w-[280px] w-[240px] px-3 h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
+              <div className="xl:w-[280px] lg:w-[240px] w-[200px] px-3 h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
                 Crystal-Clear Sound Quality
               </div>
-              <hr className="w-[25%] border border-primary/80 absolute top-40 xl:left-60 left-45 rotate-45" />
-              <div className="xl:w-[280px] w-[240px] px-3 h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
+              <hr className="min-[900px]:w-[25%] w-[30%] border border-primary/80 absolute top-50 min-[900px]:top-42 xl:left-60 left-45 rotate-45" />
+              <div className="xl:w-[280px] lg:w-[240px] w-[200px] px-3 h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
                Active Noise Cancellation (ANC)
               </div>
-               <hr className="w-[15%] border border-primary/80 absolute top-70 xl:left-72 left-60" />
-              <div className="xl:w-[280px] w-[240px] px-3 h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
+               <hr className="min-[900px]:w-[15%] w-[20%] border border-primary/80 absolute top-70 xl:left-72 min-[900px]:left-60 left-56" />
+              <div className="xl:w-[280px] lg:w-[240px] w-[200px] px-3 h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
                 All-Day Comfort
               </div>
-              <hr className="w-[25%] border border-primary/80 absolute bottom-40 xl:left-60 left-45 -rotate-45" />
+              <hr className="min-[900px]:w-[25%] w-[30%] border border-primary/80 absolute bottom-50 min-[900px]:bottom-40 xl:left-60 left-45 -rotate-45" />
             </div>
 
             <div className="flex justify-end flex-col gap-[110px] items-end">
-              <div className="xl:w-[280px] w-[240px] px-3 h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
+              <div className="xl:w-[280px] lg:w-[240px] w-[200px] px-3 h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
                 Seamless Connectivity
               </div>
-               <hr className="w-[25%] border border-primary/80 absolute top-40 xl:right-60 right-45 -rotate-45" />
-              <div className="xl:w-[280px] w-[240px] px-3 h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
+               <hr className="min-[900px]:w-[25%] w-[30%] border border-primary/80 absolute top-50 min-[900px]:top-40 xl:right-60 right-45 -rotate-45" />
+              <div className="xl:w-[280px] lg:w-[240px] w-[200px] px-3 h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
                 Long Battery Life
               </div>
-              <hr className="w-[15%] border border-primary/80 absolute top-70 xl:right-72 right-60" />
-              <div className="xl:w-[280px] w-[240px] px-3 h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
+              <hr className="min-[900px]:w-[15%] w-[20%] border border-primary/80 absolute top-70 xl:right-72 min-[900px]:right-60 right-52" />
+              <div className="xl:w-[280px] lg:w-[240px] w-[200px] px-3 h-[110px] bg-primary flex justify-center items-center text-center rounded-[20px]">
                 Ergonomic Comfort Redefined
               </div>
-               <hr className="w-[25%] border border-primary/80 absolute bottom-40 xl:right-60 right-45 rotate-45" />
+               <hr className="min-[900px]:w-[25%] w-[30%] border border-primary/80 absolute bottom-50 min-[900px]:bottom-40 xl:right-60 right-45 rotate-45" />
             </div>
           </div>
         </div>
