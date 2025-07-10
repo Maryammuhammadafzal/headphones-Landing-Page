@@ -1,7 +1,16 @@
+'use client'
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const DifferentPage = () => {
+    useEffect(() => {
+        Aos.init({
+            duration: 1000,
+            once: true,
+        })
+    })
     return (
         <div className="flex w-full justify-center items-center md:py-20 sm:py-14 py-6 h-auto">
             <div className="xl:w-[90%] w-full flex flex-col items-center gap-10">
@@ -11,11 +20,11 @@ const DifferentPage = () => {
 
                 <div className="w-full flex flex-col gap-6 lg:py-10 md:py-7 sm:py-5 py-3">
 
-                    <div className="grid md:grid-cols-5 grid-cols-1 gap-4 w-full">
+                    <div data-aos="fade-up" className="grid md:grid-cols-5 grid-cols-1 gap-4 w-full">
                         {[1, 2].map((_, i) => (
                             <div
                                 key={i}
-                                className={`relative w-full h-[450px] rounded-[40px] overflow-hidden ${i === 0 ? 'col-span-3' : 'col-span-2'}`}
+                                className={`relative w-full md:h-[450px] sm:h-[400px] xs:h-[350px] h-[300px] rounded-[40px] overflow-hidden ${i === 0 ? 'col-span-3' : 'col-span-2'}`}
                             >
                                 <Image
                                     src={i === 0 ? '/images/different-image1.png' : '/images/different-image2.png'}
@@ -29,13 +38,13 @@ const DifferentPage = () => {
                                         alt="icon"
                                         width={50}
                                         height={50}
-                                        className={`${i === 0 ? 'block' : 'hidden'} m-5`}
+                                        className={`${i === 0 ? 'block' : 'hidden'} m-5 max-sm:w-[34px] max-sm:h-[35px]`}
                                     />
                                     <div className="text-primary-foreground mt-4 w-full h-full flex flex-col justify-end py-5 px-3">
-                                        <h3 className="lg:text-5xl text-4xl font-sans sm:text-3xl font-bold">
+                                        <h3 className="lg:text-5xl md:text-4xl font-sans xs:text-3xl text-2xl font-bold">
                                             {i === 0 ? 'Uncompromising Quality' : 'Innovative Design'}
                                         </h3>
-                                        <p className="xl:text-xl text-lg  mt-2 font-sans max-w-lg">
+                                        <p className="xl:text-xl md:text-lg sm:text-base text-sm mt-2 font-sans max-w-lg">
                                             {i === 0 ? 'Every detail of our headphones is crafted to perfection, from the materials used to the sound they produce.' : 'Combining aesthetics and functionality, our headphones are a perfect blend of style and performance.'}
                                         </p>
                                     </div>
@@ -55,6 +64,7 @@ const DifferentPage = () => {
                                     </h3>
 
                                     <Image
+                                        data-aos="fade-down"
                                         src='/images/boy-image.png'
                                         alt="Customer"
                                         layout="fill"

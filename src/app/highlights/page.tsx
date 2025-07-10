@@ -1,7 +1,16 @@
+'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const HighlightPage = () => {
+    useEffect(()=> {
+    Aos.init({
+        duration: 1000,
+        once : true,
+    })
+ })
     let highlight_data = [
         {
             title : 'High-Fidelity Audio',
@@ -27,7 +36,7 @@ const HighlightPage = () => {
                 <div className='w-full grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 mx-auto h-auto md:py-7 sm:py-5 py-3 justify-evenly items-center'>
                   {
                     highlight_data.map(({image , title}, index) => (
-                          <div key={index}
+                          <div key={index} data-aos="fade-up"
                         className="flex relative justify-center items-center rounded-full bg-white h-[265px] mx-auto xl:w-[265px] w-[265px] lg:w-[210px]"
                     >
                         <svg
