@@ -1,42 +1,84 @@
+'use client'
 import Header from '@/components/Header'
-import React from 'react'
+import Image from 'next/image'
+import { off } from 'process'
+import React, { useEffect, useState } from 'react'
 
 const HeroPage = () => {
+  let [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setOffset(window.scrollY);
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scale = Math.max(0.5, 1 - offset / 1000);
   return (
-    <div className='w-full min-h-screen flex items-center p-6 flex-col'>
-      <div className="w-full">
-        <div className="relative w-full flex flex-col p-6 h-[600px] bg-primary rounded-[40px] overflow-hidden">
+    <div className='w-full relative min-h-screen flex items-center p-6 flex-col'>
+      <div className="w-full flex flex-col gap-6 justify-center items-center h-auto">
+        <div className=" w-full flex flex-col p-6 h-[600px] bg-primary rounded-[40px] overflow-hidden">
           <div className='w-full h-[60px] flex justify-center  items-center rounded-[40px]'>
             <Header />
           </div>
           <div className=" flex flex-col justify-start items-center p-4 ">
 
             <h2 className='gradient-title xl:text-[231px] lg:text-[200px] lg:leading-[130px] md:text-[140px] md:leading-[110px] sm:text-[110px] sm:leading-[90px] xs:text-[84px] xs:leading-[70px] text-[64px] leading-[50px] min-[350px]:text-[64px] min-[350px]:leading-[64px] min-[280px]:text-[48px] min-[280px]:leading-[48px] font-mono uppercase xl:leading-[150px] letter-spacing'>HEADPHONES</h2>
-           <p className='xl:text-6xl lg:text-5xl md:text-4xl text-3xl text-primary-foreground font-sans'>Experience Sound Like Never Before</p>
-            <div className="w-full h-full  flex md:flex-row flex-col md:justify-between justify-start md:items-center items-start lg:gap-4 md:gap-8">
-              <h3 className="lg:text-5xl lg:max-w-md md:max-w-sm max-w-xs text-primary-foreground md:text-4xl font-sans sm:text-3xl text-2xl font-bold">
-                Customer-Centric Approach
-              </h3>
+            <p className='xl:text-6xl lg:text-5xl md:text-4xl text-3xl text-primary-foreground font-sans'>Experience Sound Like Never Before</p>
+            <div
+              // style={{
+              //   transform: `${offset > 0 ? 'translateY(500px)' : 'translateY(0px)'
+              //     }`,
+              //   transition: 'transform 0.5s linear'
+              // }}
+              className='absolute mx-auto top-0 w-[620px] z-50 h-[620px]'>
 
-              {/* <Image
-                data-aos="fade-down"
-                src='/images/boy-image.png'
-                alt="Customer"
-                layout="fill"
-                className="object-cover"
-              />
               <Image
-                src='/images/boy-image1.png'
+                data-aos="fade-down"
+                src='/images/headphones-image.png'
                 alt="Customer"
-                layout="fill"
-                className="object-cover absolute top-20 bottom-0 left-0  -z-10"
-              /> */}
+                width={300}
+                height={300}
 
-              <p className="xl:text-xl lg:text-lg  sm:text-base text-sm md:max-w-xs max-w-2xs lg:max-w-sm lg:px-3  mt-2 font-sans text-primary-foreground">
-                Your satisfaction is our priority. We offer a 30-day return policy and a dedicated support team to assist you.
-              </p>
+                className={`w-full h-full`}
+              />
             </div>
+
           </div>
+        </div>
+        <div data-aos="fade-up" className="grid md:grid-cols-5 grid-cols-1 gap-4 w-full">
+          {[1, 2].map((_, i) => (
+            <div
+              key={i}
+              className={`relative w-full md:h-[320px] sm:h-[400px] xs:h-[350px] h-[300px] rounded-[40px] overflow-hidden ${i === 0 ? 'col-span-3' : 'col-span-2 bg-black'}`}
+            >
+              <Image
+                src={i === 0 ? '/images/hero-card-image1.png' : '/images/hero-card2.png'}
+                alt="Customer Feedback"
+                layout="fill"
+                className={`${i === 0 ? 'object-cover' : 'object-contain'}`}
+              />
+              <div className={`absolute inset-0  flex-col justify-start items-end p-4 ${i === 0 ? 'flex' : 'hidden'}`}>
+                <Image
+                  src="/images/star-icon.png"
+                  alt="icon"
+                  width={50}
+                  height={50}
+                  className={`${i === 0 ? 'block' : 'hidden'} m-5 max-sm:w-[34px] max-sm:h-[35px]`}
+                />
+                <div className="text-primary-foreground mt-4 w-full h-full flex flex-col justify-end py-5 p-8">
+                  <h3 className="lg:text-4xl capitalize md:text-4xl font-sans xs:text-3xl text-2xl font-bold">
+                    {i === 0 ? 'our headphones deliver precision sound, unmatched comfort, and cutting-edge technology.' : 'Innovative Design'}
+                  </h3>
+                  <p className={`xl:text-xl md:text-lg sm:text-base text-sm mt-2 font-sans max-w-lg ${i === 0 ? 'hidden' : 'block'}`}>
+                    {i === 0 ? '' : 'Combining aesthetics and functionality, our headphones are a perfect blend of style and performance.'}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
