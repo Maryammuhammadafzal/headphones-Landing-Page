@@ -15,7 +15,7 @@ const HeroPage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scale = Math.max(0.5, 1 - offset / 1000);
+  const scale = Math.min(1.2, 1 + offset / 1000);
   return (
     <div className='w-full relative min-h-screen flex items-center p-6 flex-col'>
       <div className="w-full flex flex-col gap-6 justify-center items-center h-auto">
@@ -29,11 +29,11 @@ const HeroPage = () => {
               <h2 className='gradient-title xl:text-[231px] lg:text-[200px] lg:leading-[130px] md:text-[140px] md:leading-[110px] sm:text-[110px] sm:leading-[90px] xs:text-[84px] xs:leading-[70px] text-[64px] leading-[50px] min-[350px]:text-[64px] min-[350px]:leading-[64px] min-[280px]:text-[48px] min-[280px]:leading-[48px] font-mono uppercase xl:leading-[150px] letter-spacing'>HEADPHONES</h2>
               <p className='xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl xs:text-2xl text-xl text-primary-foreground text-center font-sans'>Experience Sound Like Never Before</p>
               <div
-                // style={{
-                //   transform: `${offset > 0 ? 'translateY(500px)' : 'translateY(0px)'
-                //     }`,
-                //   transition: 'transform 0.5s linear'
-                // }}
+                style={{
+                  transform: `${offset > 0 ? `translateY(1200px) scale(${scale})` : 'translateY(0px)'
+                    }`,
+                  transition: 'transform 0.5s linear'
+                }}
                 className='absolute mx-auto xs:top-0 top-20 sm:w-[620px] z-50 w-full 2xs:h-[400px] 3xs:h-[350px] h-auto xs:h-[480px]  sm:h-[540px]'>
 
                 <Image
