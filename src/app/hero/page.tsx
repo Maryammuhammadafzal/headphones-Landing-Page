@@ -7,21 +7,54 @@ import React, { useEffect, useState } from 'react'
 const HeroPage = () => {
   let [offset, setOffset] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setOffset(window.scrollY);
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+useEffect(() => {
+  const handleScroll = () => {
+    setOffset(window.scrollY);
+  };
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
-  const scale = Math.min(1.2, 1 + offset / 1000);
-  const isTablet = typeof window !== "undefined" && window.innerWidth < 1024;
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-  const adjustedScale = isTablet ? scale - 0.4 : scale && isMobile ? scale - 0.6 : scale ;
+const scale = Math.min(1.2, 1 + offset / 1000);
 
-  const baseTranslateY = 1300;
-  const adjustedTranslateY = baseTranslateY * (adjustedScale / 1);
+const isXXSmall = typeof window !== "undefined" && window.innerWidth < 384;
+const isXSmall = typeof window !== "undefined" && window.innerWidth < 480;
+const isSmall = typeof window !== "undefined" && window.innerWidth < 640;
+const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+const isTablet = typeof window !== "undefined" && window.innerWidth < 1024;
+const isDesktop = typeof window !== "undefined" && window.innerWidth < 1500;
+
+let adjustedScale = scale;
+
+if (isXXSmall) {
+  adjustedScale = scale - 0.7;
+} else if (isXSmall) {
+  adjustedScale = scale - 0.7;
+} else if (isSmall) {
+  adjustedScale = scale - 0.6;
+} else if (isMobile) {
+  adjustedScale = scale - 0.5;
+} else if (isTablet) {
+  adjustedScale = scale - 0.4;
+} else if (isDesktop) {
+  adjustedScale = scale - 0.1;
+}
+
+const baseTranslateY = 1000;
+let adjustedTranslateY = baseTranslateY * adjustedScale;
+if ( isXXSmall ) {
+adjustedTranslateY += 730
+} else if (isXSmall) {
+adjustedTranslateY += 850
+} else if (isSmall) {
+  adjustedTranslateY += 750; 
+} else if ( isMobile) {
+  adjustedTranslateY += 800;
+} else if ( isTablet ) {
+  adjustedTranslateY += 300
+} else if ( isDesktop ) {
+  adjustedTranslateY += 100
+}
 
   return (
     <div className='w-full relative min-h-screen flex items-center p-6 flex-col'>
