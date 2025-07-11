@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import TestimonialPage from "./testimonial/page";
 import WorkPage from "./work/page";
 import HighlightPage from "./highlights/page";

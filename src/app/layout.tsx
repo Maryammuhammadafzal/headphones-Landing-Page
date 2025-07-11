@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Tektur, Tac_One } from "next/font/google";
 import "./globals.css";
-import HeroPage from "./hero/page";
 import Footer from "@/components/Footer";
 
 const tektur = Tektur({

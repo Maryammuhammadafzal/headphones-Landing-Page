@@ -6,9 +6,9 @@ import React, { useEffect, useState } from 'react'
 
 const Header = () => {
   const [IsMenuOpen, setIsMenuOpen] = useState(false);
-  //   useEffect(() => {
-  //   document.body.style.overflow = IsMenuOpen ? "hidden" : "auto";
-  // }, [IsMenuOpen]);
+    useEffect(() => {
+    document.body.style.overflow = IsMenuOpen ? "hidden" : "auto";
+  }, [IsMenuOpen]);
   let nav_data = [
     {
       link: '/features',
