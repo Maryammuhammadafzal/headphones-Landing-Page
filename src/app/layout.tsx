@@ -31,7 +31,6 @@ export default function RootLayout({
       <body
         className={`${tektur.variable} ${tacOne.variable} antialiased`}
       >
-        <HeroPage/>
         {children}
         <Footer/>
       </body>

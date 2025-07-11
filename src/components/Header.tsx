@@ -11,7 +11,7 @@ const Header = () => {
   // }, [IsMenuOpen]);
   let nav_data = [
     {
-      link: '/',
+      link: '/features',
       name: 'Features'
     },
     {
@@ -19,11 +19,11 @@ const Header = () => {
       name: 'Testimonials'
     },
     {
-      link: '/',
+      link: '/different',
       name: 'About Product'
     },
     {
-      link: '/',
+      link: '#contact',
       name: 'Contact Us'
     },
 
