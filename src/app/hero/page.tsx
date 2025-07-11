@@ -74,7 +74,7 @@ adjustedTranslateY += 650
                     }`,
                   transition: 'transform 0.5s linear'
                 }}
-                className='headphone absolute mx-auto xs:top-0 top-20 sm:w-[620px] z-50 w-full 2xs:h-[400px] 3xs:h-[350px] h-auto xs:h-[480px]  sm:h-[540px]'>
+                className='headphone absolute mx-auto xs:top-0 top-20 sm:w-[620px] z-40 w-full 2xs:h-[400px] 3xs:h-[350px] h-auto xs:h-[480px]  sm:h-[540px]'>
 
                 <Image
                   data-aos="fade-down"
