@@ -33,7 +33,7 @@ const TestimonialPage = () => {
                 <div className='w-full flex flex-wrap md:gap-6 sm:gap-4 gap-2 h-auto md:py-7 sm:py-5 py-3 justify-evenly items-center'>
                     {
                         testimonial_data.map(({ description, name } , index) => (
-                            <Card key={index} data-aos="fade-up" className='shadow-none  border-none rounded-none p-0 flex justify-end items-end max-3xs:w-full w-[390px] h-[250px] relative'>
+                            <Card key={index} data-aos="fade-up" className='shadow-none  border-none rounded-none p-0 flex justify-end items-end max-3xs:w-full w-[390px] sm:h-[250px] xs:h-[200px] 2xs:h-[180px] h-[190px] relative'>
                                 <Image src='/images/testimonial-icon.png' alt='icon' width={64} height={64} className='absolute top-0 right-0' />
                                 <CardContent className='xs:p-4 p-2 w-full h-auto bg-muted-foreground/20 rounded-2xl flex justify-center items-center flex-col gap-3'>
                                     <p className='md:text-xl xl:mt-6 sm:text-lg 2xs:text-base 3xs:text-sm text-xs font-sans text-primary text-center'>

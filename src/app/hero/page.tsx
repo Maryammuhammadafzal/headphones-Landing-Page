@@ -101,7 +101,7 @@ adjustedTranslateY += 650
           {[1, 2].map((_, i) => (
             <div
               key={i}
-              className={`relative w-full md:h-[320px] sm:h-[400px] xs:h-[350px] h-[300px] rounded-[40px] overflow-hidden ${i === 0 ? 'md:col-span-3' : 'md:col-span-2 bg-black'}`}
+              className={`relative w-full md:h-[320px] sm:h-[400px] xs:h-[350px] 2xs:h-[300px] h-[250px] rounded-[40px] overflow-hidden ${i === 0 ? 'md:col-span-3' : 'md:col-span-2 bg-black'}`}
             >
               <Image
                 src={i === 0 ? '/images/hero-card-image1.png' : '/images/hero-card2.png'}
@@ -117,11 +117,11 @@ adjustedTranslateY += 650
                   height={50}
                   className={`${i === 0 ? 'block' : 'hidden'} m-5 max-sm:w-[34px] max-sm:h-[35px]`}
                 />
-                <div className="text-primary-foreground mt-4 w-full h-full flex flex-col justify-end py-5 p-8">
-                  <h3 className="lg:text-4xl capitalize md:text-4xl font-sans xs:text-3xl text-2xl font-bold">
+                <div className="text-primary-foreground mt-4 w-full h-full flex flex-col justify-end py-5 md:p-8 sm:p-6 xs:p-4 2xs:p-2 p-0">
+                  <h3 className="lg:text-4xl capitalize md:text-3xl font-sans sm:text-3xl xs:text-2xl 2xs:text-xl text-lg font-bold">
                     {i === 0 ? 'our headphones deliver precision sound, unmatched comfort, and cutting-edge technology.' : 'Innovative Design'}
                   </h3>
-                  <p className={`xl:text-xl md:text-lg sm:text-base text-sm mt-2 font-sans max-w-lg ${i === 0 ? 'hidden' : 'block'}`}>
+                  <p className={`xl:text-xl md:text-lg sm:text-base xs:text-sm text-xs mt-2 font-sans max-w-lg ${i === 0 ? 'hidden' : 'block'}`}>
                     {i === 0 ? '' : 'Combining aesthetics and functionality, our headphones are a perfect blend of style and performance.'}
                   </p>
                 </div>
