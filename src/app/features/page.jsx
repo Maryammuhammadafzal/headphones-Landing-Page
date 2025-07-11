@@ -23,7 +23,7 @@ const FeaturesPage = () => {
               <div className="xl:w-[280px] lg:w-[240px] md:w-[200px] sm:w-[160px] xs:w-[130px] 2xs:w-[100px] w-[85px] xs:px-3 px-1 sm:h-[110px] xs:h-[90px] h-[70px] bg-primary flex justify-center items-center text-center rounded-[20px]">
                 All-Day Comfort
               </div>
-              <hr className="min-[900px]:w-[20%] xs:w-[30%] w-[20%] border border-primary/80 absolute md:bottom-50 sm:bottom-40 xs:bottom-30 bottom-20 min-[900px]:bottom-40 xl:left-60 md:left-45 sm:left-30 left-20 -rotate-45" />
+              <hr className="min-[900px]:w-[15%] xs:w-[30%] w-[20%] border border-primary/80 absolute md:bottom-50 sm:bottom-40 xs:bottom-30 bottom-20 min-[900px]:bottom-40 xl:left-60 md:left-45 sm:left-30 left-20 -rotate-45" />
             </div>
 
             <div className="flex justify-end flex-col md:gap-[110px] sm:gap-[70px] xs:gap-[50px] 2xs:gap-[30px] gap-[14px] items-end">
