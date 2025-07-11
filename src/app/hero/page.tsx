@@ -27,7 +27,7 @@ const isDesktop = typeof window !== "undefined" && window.innerWidth < 1500;
 let adjustedScale = scale;
 
 if (isXXSmall) {
-  adjustedScale = scale - 0.7;
+  adjustedScale = scale - 0.8;
 } else if (isXSmall) {
   adjustedScale = scale - 0.7;
 } else if (isSmall) {
@@ -43,9 +43,9 @@ if (isXXSmall) {
 const baseTranslateY = 1000;
 let adjustedTranslateY = baseTranslateY * adjustedScale;
 if ( isXXSmall ) {
-adjustedTranslateY += 730
+adjustedTranslateY += 745
 } else if (isXSmall) {
-adjustedTranslateY += 850
+adjustedTranslateY += 650
 } else if (isSmall) {
   adjustedTranslateY += 750; 
 } else if ( isMobile) {
