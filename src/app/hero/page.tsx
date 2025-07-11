@@ -57,7 +57,7 @@ adjustedTranslateY += 650
 }
 
   return (
-    <div className='w-full relative min-h-screen flex items-center p-6 flex-col'>
+    <div className='w-full relative min-h-screen flex items-center md:p-6 sm:p-4 p-3 flex-col'>
       <div className="w-full flex flex-col gap-6 justify-center items-center h-auto">
         <div className=" w-full flex flex-col p-6 h-[600px] bg-primary rounded-[40px] overflow-hidden">
           <div className='w-full h-[60px] flex justify-center  items-center rounded-[40px]'>

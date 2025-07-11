@@ -24,7 +24,7 @@ const DifferentPage = () => {
                         {[1, 2].map((_, i) => (
                             <div
                                 key={i}
-                                className={`relative w-full md:h-[450px] sm:h-[400px] xs:h-[350px] h-[300px] rounded-[40px] overflow-hidden ${i === 0 ? 'col-span-3' : 'col-span-2'}`}
+                                className={`relative w-full md:h-[450px] sm:h-[400px] xs:h-[350px] h-[300px] rounded-[40px] overflow-hidden ${i === 0 ? 'md:col-span-3' : 'md:col-span-2'}`}
                             >
                                 <Image
                                     src={i === 0 ? '/images/different-image1.png' : '/images/different-image2.png'}

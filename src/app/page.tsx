@@ -7,7 +7,7 @@ import FeaturesPage from "./features/page";
 
 export default function Home() {
   return (
-<div className="w-full h-auto overflow-hidden p-8 relative">
+<div className="w-full h-auto overflow-hidden lg:p-8 md:p-6 sm:p-4 p-2 relative">
   <FeaturesPage/>
   <HighlightPage/>
   <DifferentPage/>

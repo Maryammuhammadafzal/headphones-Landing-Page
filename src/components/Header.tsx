@@ -6,17 +6,17 @@ import React, { useEffect, useState } from 'react'
 
 const Header = () => {
   const [IsMenuOpen, setIsMenuOpen] = useState(false);
-    useEffect(() => {
-    document.body.style.overflow = IsMenuOpen ? "hidden" : "auto";
-  }, [IsMenuOpen]);
+  //   useEffect(() => {
+  //   document.body.style.overflow = IsMenuOpen ? "hidden" : "auto";
+  // }, [IsMenuOpen]);
   let nav_data = [
     {
       link: '/',
-      name: 'Home'
+      name: 'Features'
     },
     {
-      link: '/',
-      name: 'Features'
+      link: '/testimonial',
+      name: 'Testimonials'
     },
     {
       link: '/',
@@ -32,7 +32,7 @@ const Header = () => {
   console.log(IsMenuOpen);
 
   return (
-    <div className='flex justify-between w-full relative h-full items-center'>
+    <div className='flex justify-between w-full h-full items-center'>
       <Link href='/' className='p-6'>
         <Image src='/images/logo.png' alt='logo' width={64} height={64} />
       </Link>
@@ -50,15 +50,14 @@ const Header = () => {
           <MenuIcon size={40} color='#fff' />
         </div>
         <div
-          className={`absolute top-0 right-0 z-50 h-screen w-[60%] sm:w-[40%] bg-white transition-transform duration-300 ease-in-out ${IsMenuOpen ? 'translate-x-0' : 'translate-x-100'} sm:hidden`}
+          className={`fixed top-0 right-0 z-50 h-screen w-[60%] sm:w-[40%] bg-white transform transition-transform duration-300 ease-in-out ${IsMenuOpen ? 'translate-x-0' : 'translate-x-100'} sm:hidden`}
         >
 
           <ul className="w-full h-full flex gap-3 p-3 flex-col">
             <li onClick={() => setIsMenuOpen(false)}
-              className="menu-con w-full h-auto p-2 flex justify-end"
-
+              className="menu-icon w-full h-auto p-2 flex justify-end"
             >
-              <X  size={40} />
+              <X size={40} />
             </li>
             {nav_data &&
               nav_data.map((item, index) => (
